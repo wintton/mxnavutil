@@ -13,6 +13,7 @@ import java.util.Calendar;
 /**
  * 2019-03-13
  * 灵，ZWQ 建立 1.0.0版 android提示窗使用工具
+ * 2019-05-23  1.0.1版
  * 梦辛工作室
  */
 public class DialogUtil {
@@ -129,13 +130,13 @@ public class DialogUtil {
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setMessage(msg);
         builder.setTitle(title);
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(confirmtext, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 callBack.getResult(CallBack.SUCCESS);
             }
         });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(canletext, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 callBack.getResult(CallBack.FAIL);

@@ -36,9 +36,11 @@ public class NavUtil {
         }
         return instance;
     }
+
     public void onCreate(Activity activity){
         activityStack.push(activity);
     }
+
 
     public void onDestory(Activity activity){
         if (activityStack.contains(activity)){
